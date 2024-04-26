@@ -73,12 +73,59 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontSize: 16,
                           color: black),
                       decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: Icon(
-                            Icons.email,
-                            color: black,
-                          ),
-                          l),
+                        border: InputBorder.none,
+                        prefixIcon: Icon(Icons.email_outlined),
+                        prefixIconColor: black,
+                        hintText: "이메일 주소를 입력하세요",
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+          SizedBox(height: 20),
+          Container(
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              decoration: BoxDecoration(
+                color: white,
+                borderRadius: BorderRadius.circular(25),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 10,
+                    blurRadius: 7,
+                  )
+                ],
+              ),
+              child: Padding(
+                padding:
+                    EdgeInsets.only(left: 20, top: 15, bottom: 5, right: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "비밀번호",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: Color(0xff67727d)),
+                    ),
+                    TextField(
+                      obscureText: true,
+                      controller: _password,
+                      cursorColor: black,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: black),
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        prefixIcon: Icon(Icons.lock_outline_rounded),
+                        prefixIconColor: black,
+                        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                        suffixIconColor: black,
+                        hintText: "비밀번호를 입력하세요",
+                      ),
                     ),
                   ],
                 ),
