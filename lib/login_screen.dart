@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_financeapp_ui_practice_1/colors.dart';
+import 'package:flutter_financeapp_ui_practice_1/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -9,8 +10,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _email =
-      TextEditingController(text: "CDC@programer.com");
+  TextEditingController _email = TextEditingController(text: "이메일을 입력하세요");
   TextEditingController _password = TextEditingController(text: "123456");
 
   @override
@@ -29,15 +29,15 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           SizedBox(height: 60),
           Container(
-            height: 70,
-            width: 70,
+            height: 100,
+            width: 100,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                     image: AssetImage("assets/images/profile.jpg"),
                     fit: BoxFit.cover)),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 112),
           Container(
               width: double.infinity,
               margin: EdgeInsets.symmetric(horizontal: 20),
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                 color: white,
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(26),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
@@ -130,6 +130,55 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               )),
+          SizedBox(height: 112),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()));
+              print("로그인버튼클릭");
+            },
+            child: Container(
+                padding: EdgeInsets.all(16),
+                margin: EdgeInsets.symmetric(horizontal: 26),
+                decoration: BoxDecoration(
+                  color: buttoncolor,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Center(
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1.2),
+                  ),
+                )),
+          ),
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 38),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "회원가입",
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w300),
+                ),
+                SizedBox(width: 20),
+                Text(
+                  "비밀번호 찾기",
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w300),
+                )
+              ],
+            ),
+          )
         ],
       )),
     );
