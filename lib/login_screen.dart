@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               )),
-          SizedBox(height: 112),
+          SizedBox(height: 20),
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(context,
