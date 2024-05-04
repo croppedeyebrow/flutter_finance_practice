@@ -75,6 +75,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       padding: EdgeInsets.only(
@@ -87,16 +88,105 @@ class _TransactionScreenState extends State<TransactionScreen> {
                         child: Text(
                           "All",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: white,
                               fontSize: 12,
                               fontWeight: FontWeight.w700),
                         ),
                       ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                          left: 26, right: 26, top: 5, bottom: 5),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(26),
+                          boxShadow: [
+                            BoxShadow(
+                                color: grey.withOpacity(0.04),
+                                spreadRadius: 10,
+                                blurRadius: 3)
+                          ]),
+                      child: Center(
+                          child: Text(
+                        "Expense",
+                        style: TextStyle(
+                            color: Colors.black.withOpacity(0.55),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600),
+                      )),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                          left: 26, right: 26, top: 5, bottom: 5),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(26),
+                          boxShadow: [
+                            BoxShadow(
+                                color: grey.withOpacity(0.04),
+                                spreadRadius: 10,
+                                blurRadius: 3)
+                          ]),
+                      child: Center(
+                          child: Text(
+                        "Revenue",
+                        style: TextStyle(
+                            color: Colors.black.withOpacity(0.55),
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600),
+                      )),
                     )
                   ],
                 )
               ],
             ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 26, right: 26, bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("오늘",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: mainFontColor))
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              Expanded(
+                  child: Container(
+                      margin: EdgeInsets.only(top: 10, left: 26, right: 26),
+                      decoration: BoxDecoration(
+                        color: white,
+                        borderRadius: BorderRadius.circular(24),
+                        boxShadow: [
+                          BoxShadow(
+                              color: grey.withOpacity(0.05),
+                              spreadRadius: 10,
+                              blurRadius: 4)
+                        ],
+                      ),
+                      child: Padding(
+                          padding: EdgeInsets.only(
+                              top: 10, bottom: 22, right: 22, left: 22),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 50,
+                                height: 50,
+                                child: Center(
+                                  child: Icon(
+                                    Icons.payment,
+                                    color: mainFontColor,
+                                  ),
+                                ),
+                              )
+                            ],
+                          )))),
+            ],
           )
         ],
       ),
