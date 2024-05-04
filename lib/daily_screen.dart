@@ -45,12 +45,12 @@ class _DailyScreenState extends State<DailyScreen> {
                   Column(
                     children: [
                       Container(
-                        height: 88,
-                        width: 88,
+                        height: 40,
+                        width: 40,
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                image: AssetImage("assets/images/profile.jpg"),
+                                image: AssetImage("assets/images/logo.png"),
                                 fit: BoxFit.cover)),
                       ),
                       SizedBox(height: 20),

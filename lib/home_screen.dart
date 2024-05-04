@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter_financeapp_ui_practice_1/colors.dart';
 import 'package:flutter_financeapp_ui_practice_1/daily_screen.dart';
+import 'package:flutter_financeapp_ui_practice_1/login_screen.dart';
 import 'package:flutter_financeapp_ui_practice_1/transaction_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,6 +27,25 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primary,
+      appBar: AppBar(
+        elevation: 0,
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 4, left: 4, right: 4, bottom: 4),
+          child: Row(
+            children: [
+              IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       body: getBody(),
       bottomNavigationBar: getFooter(),
       floatingActionButton: SafeArea(
