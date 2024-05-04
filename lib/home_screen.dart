@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter_financeapp_ui_practice_1/colors.dart';
 import 'package:flutter_financeapp_ui_practice_1/daily_screen.dart';
+import 'package:flutter_financeapp_ui_practice_1/transaction_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> pages = [
     DailyScreen(),
-    Container(),
+    TransactionScreen(),
     Container(),
     Container(),
     Container(),
